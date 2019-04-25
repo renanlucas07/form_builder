@@ -1,0 +1,19 @@
+<%= link_to "Início", root_path %> <br>
+
+<h4>Usuário</h4>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :name %>
+  <%= f.simple_fields_for :preferences do |cf| %>
+    <% UserField.all.each do |field| %>
+      <%= cf.input "#{field.name}", as: field.input_type_selector, collection: field.collection_list, input_html: { id: "#{field.field_type}" } %>
+      <%= f.object.errors.messages[:"#{field.name}"].first %>
+    <% end %>
+  <% end %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+
+<script type="text/javascript">
+  masked_function();
+</script>

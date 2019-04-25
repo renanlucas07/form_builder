@@ -1,0 +1,28 @@
+<%= link_to "Início", root_path %> <br>
+<%= link_to "Adicionar Novo", new_user_field_path %>
+
+
+<table>
+  <thead>
+    <th>Nome</th>
+    <th>Tipo</th>
+    <th>Obrigatório</th>
+    <th>Único</th>
+    <th>Valor Máximo</th>
+    <th>Valor Mínimo</th>
+    <th>Dica</th>
+  </thead>
+  <tbody>
+    <% @user_fields.each do |field| %>
+      <tr>
+        <td><%= field.name %></td>
+        <td><%= field.field_type %></td>
+        <td><%= field.required %></td>
+        <td><%= field.unique %></td>
+        <td><%= field.max_value %></td>
+        <td><%= field.min_value %></td>
+        <td><%= field.field_hint %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

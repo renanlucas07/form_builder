@@ -1,0 +1,21 @@
+<%= link_to "Início", root_path %> <br>
+
+<h4>Campo Personalizado</h4>
+<%= simple_form_for @user_field do |f| %>
+  <%= f.input :name %>
+  <%= f.input :field_type, collection: FieldType %>
+  <%= f.input :required %>
+  <%= f.input :unique %>
+  <%= f.input :max_value %>
+  <%= f.input :min_value %>
+  <%= f.input :field_hint %>
+
+  <h3>Collect</h3>
+    <%= f.simple_fields_for :collection_lists do |collect_list| %>
+      <%= render 'collection_list_fields', f: collect_list %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add collect', f, :collection_lists %>
+    </div>
+  <%= f.submit %>
+<% end %>

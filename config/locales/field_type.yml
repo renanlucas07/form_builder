@@ -1,0 +1,20 @@
+pt-BR:
+  enumerations:
+    field_type:
+      car_plate_field: "Placa de Carro"
+      cellphone_field: "Celular"
+      cnpj_field: "CNPJ"
+      cpf_field: "CPF"
+      date_field: "Data"
+      datetime_field: "Data e Hora"
+      decimal_field: "Decimal"
+      email_field: "E-Mail"
+      file_field: "Arquivo"
+      hexacolor_field: "Hexadecimal de Cor"
+      integer_field: "Inteiro"
+      logo_field: "Logo"
+      longtext_field: "Texto Longo"
+      phone_field: "Telefone"
+      text_field: "Texto"
+      time_field: "Tempo"
+      zipcode_field: "CEP"
